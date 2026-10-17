@@ -1,0 +1,83 @@
+:root { --accent: #ff6433; --accent-ink: #14161a; --lime: #d7ff63; }
+:focus-visible { outline-color: var(--ink); }
+.hero { background: radial-gradient(circle at 85% 18%, #ffd2bd 0, transparent 44%); }
+.hero h1 span { display: block; color: #a53a18; }
+.section-eyebrow, .card-number { color: #8f3216; }
+.status-dot { flex: none; width: .45rem; height: .45rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px #ff643322; }
+.site-nav .nav-cta { padding: .5rem .65rem; border: 1.5px solid var(--ink); background: var(--accent); color: var(--accent-ink); }
+.text-link { flex: none; font: 700 .72rem var(--mono); text-transform: uppercase; letter-spacing: .05em; text-underline-offset: 5px; }
+
+.farm-visual { position: relative; width: 100%; max-width: 610px; justify-self: center; padding: clamp(1rem, 2vw, 1.5rem); border: 2px solid var(--ink); border-radius: 16px; background: var(--ink); box-shadow: 10px 10px 0 var(--accent); overflow: hidden; }
+.farm-visual::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(#ffffff10 1px, transparent 1px), linear-gradient(90deg, #ffffff10 1px, transparent 1px); background-size: 28px 28px; }
+.farm-interface { position: relative; z-index: 1; display: flex; flex-direction: column; gap: .85rem; font-family: var(--mono); }
+.farm-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.farm-label { margin: 0; color: var(--paper); font-size: .7rem; font-weight: 700; letter-spacing: .05em; }
+.rack-label { color: #ffffffaa; font-size: .58rem; white-space: nowrap; }
+.device-rack { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.45rem, 1.2vw, .75rem); }
+.device-phone { display: flex; flex-direction: column; aspect-ratio: 2 / 3; padding: clamp(.3rem, .8vw, .5rem); border: 2px solid #ffffffd9; border-radius: clamp(8px, 1.5vw, 14px); background: #0c0e11; box-shadow: 0 5px 0 #00000055; }
+.device-speaker { flex: none; width: 30%; height: 3px; margin: 0 auto; border-radius: 999px; background: #ffffff55; }
+.device-screen { display: grid; place-items: center; flex: 1; margin-top: .4rem; border: 1px solid #ff643377; border-radius: 7px; background: linear-gradient(150deg, #ff643333, #20232b 62%); color: var(--paper); font: 700 clamp(.65rem, 1.2vw, .78rem) var(--mono); }
+.device-phone:nth-child(even) .device-screen { background: linear-gradient(210deg, #d7ff6326, #20232b 62%); border-color: #d7ff6366; }
+.farm-cable { width: 100%; height: clamp(2.5rem, 5vw, 3.75rem); color: var(--lime); }
+.farm-cable path { fill: none; stroke: currentColor; stroke-width: 2; stroke-dasharray: 5 6; vector-effect: non-scaling-stroke; }
+.farm-cable circle { fill: currentColor; }
+.farm-box { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 4rem; padding: .9rem 1.1rem; border: 1.5px solid var(--lime); border-radius: 8px; background: #20231d; color: var(--lime); box-shadow: 0 0 0 5px #d7ff630c; }
+.box-name { font-size: .8rem; font-weight: 700; letter-spacing: .08em; }
+.box-status { display: inline-flex; align-items: center; gap: .4rem; color: var(--paper); font-size: .58rem; white-space: nowrap; }
+.box-dot { width: .4rem; height: .4rem; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 3px #d7ff6322; }
+
+.offer-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 1rem; }
+.offer-card { position: relative; box-shadow: 5px 5px 0 var(--accent); }
+.offer-card::before { content: ''; position: absolute; top: 0; left: 1.5rem; width: 3rem; height: 4px; background: var(--accent); }
+.phone-count, .plan-minimum { color: var(--muted); font: .75rem var(--mono); text-transform: uppercase; letter-spacing: .04em; }
+.plan-minimum { line-height: 1.6; }
+.offer-card .btn { width: 100%; }
+.additional-phones { display: flex; flex-direction: column; justify-content: center; background: var(--lime); }
+.additional-phones h3 { font-size: clamp(1.6rem, 3vw, 2.35rem); }
+.additional-phones p { max-width: 350px; margin-bottom: 0; font-size: 1.05rem; }
+.feature-card { box-shadow: 3px 3px 0 var(--line); }
+.feature-card:nth-child(2) { background: #fff1e9; }
+.steps-list { margin: 0; padding: 0; list-style: none; }
+.step-card { min-height: 180px; }
+.step-card h3 { max-width: 300px; margin-bottom: 0; font-size: clamp(1.25rem, 2vw, 1.65rem); }
+.faq-list summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; list-style: none; }
+.faq-list summary::-webkit-details-marker { display: none; }
+.faq-list summary::after { content: '+'; flex: none; color: #8f3216; font: 1.3rem var(--mono); transition: transform .15s; }
+.faq-list details[open] summary::after { transform: rotate(45deg); }
+.faq-list details p { margin-bottom: 0; }
+.faq-list details a { text-underline-offset: 3px; }
+.contact h2 { max-width: 800px; }
+.contact .section-eyebrow { color: inherit; }
+.contact-copy { max-width: 620px; font-size: 1.08rem; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+.contact .btn-ghost { border-color: var(--accent-ink); color: var(--accent-ink); }
+.contact .btn:focus-visible { outline-color: var(--accent-ink); }
+.contact .btn-ghost:hover { box-shadow: 4px 4px 0 var(--accent-ink); }
+.footer-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; }
+.footer-copyright { margin: 0; font: .7rem var(--mono); white-space: nowrap; }
+
+@media (max-width: 1050px) {
+  .nav-toggle { display: block; }
+  .site-nav { display: none; position: absolute; inset: 74px 0 auto; margin: 0; padding: 1.2rem 1.5rem; flex-direction: column; align-items: stretch; gap: 1rem; border-bottom: 1.5px solid var(--ink); background: var(--paper); }
+  .site-nav[data-open='true'] { display: flex; }
+  .site-nav a { padding: .35rem 0; }
+  .site-nav .nav-cta { padding: .65rem; text-align: center; }
+}
+@media (max-width: 700px) {
+  .offer-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 680px) {
+  .contact-actions .btn { width: 100%; }
+  .footer-meta { align-items: flex-start; }
+  .footer-copyright { white-space: normal; }
+}
+@media (max-width: 520px) {
+  .farm-visual { padding: .85rem; box-shadow: 7px 7px 0 var(--accent); }
+  .farm-interface { gap: .65rem; }
+  .farm-label, .rack-label, .box-status { font-size: .7rem; }
+  .device-screen { font-size: .7rem; }
+  .farm-box { padding: .75rem; }
+}
+@media (max-width: 400px) {
+  .farm-head { flex-direction: column; align-items: flex-start; gap: .2rem; }
+}
